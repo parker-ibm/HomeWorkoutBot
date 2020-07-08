@@ -1,23 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+<title>Home Workout Bot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+<link rel="icon" href="Favicon.png">
 
-<html lang="en">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 {
+font-family: 'IBM Plex Sans', sans-serif;
+text-align:center;
+}
+h2, h3, h4 {
+font-family: 'IBM Plex Sans', sans-serif;
+text-align:center;
+margin:25px;
+}
+h4 {
+  font-weight: 600;
+}
+h5 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-align: center;
+  margin-left: -35%;
+  font-weight: 900;
+  font-size: 23px;
+
+}
+p {
+font-family: 'IBM Plex Sans', sans-serif;
+text-align:center;
+}
+
+.menu {
+  font-family: 'IBM Plex Sans', sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000000;
+}
+ul {
+  display: table;
+  margin: 0 auto;
+}
+ul li {
+  font-size:20px;
+  margin:15px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding-left: 0;
+}
+li a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+</style>
 <head>
-  <meta charset="utf-8">
-
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-</head>
-
+<script src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js"></script>
+  </head>
 <body>
-  <script src="js/scripts.js">
+  <!-- Navigation menu -->
+  <div class="menu">
+    <li><a href="#">Home Workout Bot</a></li>
+  
+  </div>
+
+<h1> Home Workout Bot</h1>
+
+ 
+ <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  
+</div>
+
+</body>
+</html>
+
+<script>
   window.watsonAssistantChatOptions = {
       integrationID: "488e7d85-8b2d-4578-88ab-4fa1e844f468", // The ID of this integration.
       region: "us-south", // The region your integration is hosted in.
       serviceInstanceID: "8deb8dc9-9eff-4b1f-aa56-7a8dcb1d9e37", // The ID of your service instance.
+      openChatByDefault: true,
+
       onLoad: function(instance) { instance.render(); }
     };
   setTimeout(function(){
@@ -26,5 +103,3 @@
     document.head.appendChild(t);
   });
 </script>
-</body>
-</html>
