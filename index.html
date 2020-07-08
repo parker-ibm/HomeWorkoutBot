@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Home Workout Bot</title>
+<title>Wise Fitness</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -47,7 +47,7 @@ text-align:center;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #000000;
+  background-color: #1da1de;
 }
 ul {
   display: table;
@@ -74,12 +74,39 @@ li a {
 <body>
   <!-- Navigation menu -->
   <div class="menu">
-    <li><a href="#">Home Workout Bot</a></li>
+    <li><a href="#"><b>Wise Fitness</b></a></li>
   
   </div>
 
-<h1> Home Workout Bot</h1>
+<h1><b>Home Workout Bot</b></h1>
 
+<img style="width:20%" src="WiseFitness.png" class="center">
+
+<p>Thanks for checking out the Wise Fitness home workout bot!<br/>
+  This intelligent chatbot uses the power of <b>IBM Watson Assistant</b><br/> to answer your most common home exercise questions.
+  <br/><br/><b>Click on the icon below to begin chatting.</b>
+</p>
+
+<h5>Example Queries</h5>
+ <div>
+   <ul>
+    <li>
+      How long should I rest between exercises?
+    </li>
+     <li>
+      How I can get stronger?
+    </li>
+    <li>
+      Please recommend me some exercises.
+     </li>
+    <li>
+      How many sets do I need to perform?
+    </li>
+    <li>
+      How much weight should I be using?
+    </li>
+   </ul>
+ </div>
  
  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   
@@ -93,7 +120,6 @@ li a {
       integrationID: "488e7d85-8b2d-4578-88ab-4fa1e844f468", // The ID of this integration.
       region: "us-south", // The region your integration is hosted in.
       serviceInstanceID: "8deb8dc9-9eff-4b1f-aa56-7a8dcb1d9e37", // The ID of your service instance.
-      openChatByDefault: true,
 
       onLoad: function(instance) { instance.render(); }
     };
