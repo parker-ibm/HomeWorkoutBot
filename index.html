@@ -68,6 +68,101 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
+.right{
+  float: right;
+}
+.logo {
+  text-align: center;
+}
+
+/* Form Stuff */
+form{
+	margin: 0 auto;
+	width: 400px;
+	padding-top: 8px;
+	color: white;
+	position: relative;
+
+	
+}
+label, input, textarea{
+	display: block;	
+}
+input, textarea{
+	width: 400px;	
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	padding: 8px;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px #98d4f3;	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	
+}
+input:focus, textarea:focus{
+	border: solid 3px #1da1de;	
+}
+
+textarea{
+	height: 100px;	
+	resize: none; 
+	overflow: auto;
+}
+input[type="submit"]{
+
+  font-family: 'IBM Plex Sans', sans-serif;
+
+	background-color: #e8356b;
+	color: white;
+	height: 50px;
+	cursor: pointer;
+	margin-top: 30px;
+	font-size: 1.25em;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+input[type="submit"]:hover{
+	background-color: #e8356b;
+	
+}
+label{
+  font-family: 'IBM Plex Sans', sans-serif;
+  color:black;
+	font-size: 1.1em;
+	margin-top: 20px;
+	padding-left: 20px;
+}
+.formgroup, .formgroup-active, .formgroup-error{
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: 10.5%;
+	transition: background-image 0.7s;
+	-webkit-transition: background-image 0.7s;
+	-moz-transition: background-image 0.7s;
+	-o-transition: background-image 0.7s;
+	width: 566px;
+	padding-top: 2px;
+}
+
+.formgroup{
+	background-image: url('http://www.geertjanhendriks.nl/codepen/form/pixel.gif');	
+}
+.formgroup-active{
+	background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo.png');
+}
+.formgroup-error{
+	background-image: url('http://www.geertjanhendriks.nl/codepen/form/octo-error.png');
+	color: red;
+}
 </style>
 <head>
 <script src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js"></script>
@@ -75,44 +170,51 @@ li a {
 <body>
   <!-- Navigation menu -->
   <div class="menu">
-    <li><a href="#"><b>Wise Fitness</b></a></li>
-  
+    <li><a href="#"><b>WISE Fitness</b></a></li>
+    <li><a class="right" href="./FAQ.html"><b>FAQ</b></a></li>
+    <nbsp;> </nbsp>
+    <li><a class="right" href="./bot.html"><b>Workout Bot</b></a></li>
+
   </div>
 
+  <img style="width:100%; margin-top: 0;" src="StephonGIF.gif" class="center">
+<img style="width:20%;min-width: 250px; margin-top:15px;" src="WiseFitness.png" class="center">
+<p>We provide evidence-based movement solutions to address fitness needs.</p>
+<p>Book a free consultation with an expert today!</p>
 
-<img style="width:20%;min-width: 200px; margin-top: 15px;" src="WiseFitness.png" class="center">
+<form action="mailto:parker.merritt@gmail.com" enctype="multipart/form-data" method="POST">
 
-<p>Thanks for checking out the Wise Fitness home workout bot!</p>
+  <div class="formgroup" id="name-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" />
+  </div>
+  
+  <div class="formgroup" id="email-form">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" />
+  </div>
+  
+  <div class="formgroup" id="message-form">
+      <label for="message">Message</label>
+      <textarea id="message" name="message"></textarea>
+  </div>
+  
+  <input type="submit" value="Submit" />
+  </form>
 
-  <p>This intelligent chatbot uses the power of <b>IBM Watson Assistant</b> to answer common home exercise questions.
-  <br/><br/><b>Click on the icon below to begin chatting.</b></p>
-</p>
-</div>
+  <br/>
+  <br/>
+  <br/>
+
+  </div>
+<p><b>Follow us:</b></p>
+<p><a href="https://www.youtube.com/channel/UCqdbkyE9NSx9W8sRTZvtLJA"><img width="60px;" class="logo" src="YouTubeLogo.png"></a>
+<a href="https://www.instagram.com/wisefitnesspt/"><img width="76px;" class="logo" src="InstaLogo.png"></a></p>
+
+<br/>
+<br/>
 <br/>
 
-<h5>Example Queries</h5>
- <div>
-   <ul>
-    <li>
-      How long should I rest between exercises?
-    </li>
-     <li>
-      How I can get stronger?
-    </li>
-    <li>
-      Please recommend me some exercises.
-     </li>
-    <li>
-      How many sets do I need to perform?
-    </li>
-    <li>
-      How much weight should I be using?
-    </li>
-   </ul>
- </div>
- <br/>
- <br/>
- <br/>
 
  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
   
@@ -120,18 +222,3 @@ li a {
 
 </body>
 </html>
-
-<script>
-  window.watsonAssistantChatOptions = {
-      integrationID: "488e7d85-8b2d-4578-88ab-4fa1e844f468", // The ID of this integration.
-      region: "us-south", // The region your integration is hosted in.
-      serviceInstanceID: "8deb8dc9-9eff-4b1f-aa56-7a8dcb1d9e37", // The ID of your service instance.
-
-      onLoad: function(instance) { instance.render(); }
-    };
-  setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
-    document.head.appendChild(t);
-  });
-</script>
